@@ -1,6 +1,6 @@
 # appli_ena
 
-A Flutter project for ENA's media platform
+A Flutter project for ENA's media platform by Joel Nyengele. It is made with authentication based on users roles and different modules. I used Firebase for auth and Firestore as database.
 
 ## Getting Started
 
