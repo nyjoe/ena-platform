@@ -1,6 +1,5 @@
 import 'package:appli_ena/auth/auth_gate.dart';
 import 'package:appli_ena/firebase_options.dart';
-//import 'package:appli_ena/roles/redirection.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 

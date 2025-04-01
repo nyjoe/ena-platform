@@ -45,7 +45,18 @@ class AuthService {
   }
 
   Future<String?> getUserRole(String uid) async {
-    var doc = await _db.collection('users').doc(uid).get();
-    return doc.data()?['role'];
+    try {
+      final doc = await _db.collection('roles').doc(uid).get();
+      if (doc.exists) {
+        return doc.data()?['role'] as String?;
+      } else {
+        throw Exception("Document inexistant !");
+      }
+    } on FirebaseException catch (e) {
+      if (e.code == 'permission-denied') {
+        throw Exception("Vous n'avez pas la permission d'accéder à ces données.");
+      }
+      throw Exception("Une erreur est survenue : ${e.message}");
+    }
   }
 }

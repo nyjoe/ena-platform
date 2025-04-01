@@ -7,8 +7,9 @@ import 'package:file_picker/file_picker.dart';
 import 'dart:io';
 
 class CandidateApplicationForm extends StatefulWidget {
+  const CandidateApplicationForm({super.key});
   @override
-  _CandidateApplicationFormState createState() => _CandidateApplicationFormState();
+  State<StatefulWidget> createState() => _CandidateApplicationFormState();
 }
 
 class _CandidateApplicationFormState extends State<CandidateApplicationForm> {
