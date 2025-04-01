@@ -32,6 +32,10 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+.packages
+.pub/
+ios/Flutter/Flutter.framework
+android/.gradle/
 
 # Symbolication related
 app.*.symbols
@@ -43,3 +47,13 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Firebase files
+*.firebaserc
+*.lock
+
+# Personal configs
+*.iml
+*.jks
+google-services.json
+GoogleService-Info.plist
