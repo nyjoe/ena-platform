@@ -13,6 +13,10 @@ class AuthService {
     return userCredential.user;
   }
 
+  Future<void> logOut() async {
+    await _auth.signOut();
+  }
+
   Future<void> registerUser(String email, String password, String role) async {
     var userCredential = await _auth.createUserWithEmailAndPassword(
         email: email, password: password);

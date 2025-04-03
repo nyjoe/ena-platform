@@ -1,5 +1,8 @@
 // roles/admin_home.dart
+import 'package:appli_ena/roles/admin/admin_calendar_page.dart';
 import 'package:appli_ena/roles/admin/admin_candidature_page.dart';
+import 'package:appli_ena/roles/admin/admin_courses_page.dart';
+import 'package:appli_ena/roles/admin/admin_users_page.dart';
 import 'package:flutter/material.dart';
 
 class AdminHome extends StatelessWidget {
@@ -24,8 +27,8 @@ class AdminHome extends StatelessWidget {
             title: Text('Suivi des élèves'),
             subtitle: Text("Gérer les comptes et rôles"),
             onTap: () {
-              // Navigator.push(context,
-              // MaterialPageRoute(builder: (_) => AdminUsersPage()));
+              Navigator.push(context,
+              MaterialPageRoute(builder: (_) => AdminUsersPage()));
             },
           ),
           ListTile(
@@ -33,8 +36,8 @@ class AdminHome extends StatelessWidget {
             title: Text('Calendrier'),
             subtitle: Text("Ajouter/modifier les événements académiques"),
             onTap: () {
-              // Navigator.push(context,
-              // MaterialPageRoute(builder: (_) => AdminCalendarPage()));
+              Navigator.push(context,
+              MaterialPageRoute(builder: (_) => AdminCalendarPage()));
             },
           ),
           ListTile(
@@ -42,8 +45,8 @@ class AdminHome extends StatelessWidget {
             title: Text('Cours & Publications'),
             subtitle: Text("Revoir les ressources pédagogiques"),
             onTap: ()  {
-              // Navigator.push(context,
-              // MaterialPageRoute(builder: (_) => AdminCoursesPage()));
+              Navigator.push(context,
+              MaterialPageRoute(builder: (_) => AdminCoursesPage()));
             }
           ),
           ListTile(

@@ -20,6 +20,7 @@ class _TeacherCourseManagePageState extends State<TeacherCourseManagePage> {
       'description': _description,
       'documentUrl': _docUrl,
       'enseignantId': uid,
+      'statut': 'en_attente',
       'createdAt': FieldValue.serverTimestamp(),
     });
 

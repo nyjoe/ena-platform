@@ -1,10 +1,10 @@
 // role_manager.dart
+import 'package:appli_ena/roles/admin/admin_dashboard.dart';
 import 'package:flutter/material.dart';
 
 import 'candidates/candidate_home.dart';
 import 'students/student_home.dart';
 import 'teachers/teacher_home.dart';
-import 'admin/admin_home.dart';
 import 'alumni/alumni_home.dart';
 import 'guests/guest_home.dart';
 
@@ -23,7 +23,7 @@ class RoleManager extends StatelessWidget {
       case 'enseignant':
         return TeacherHome();
       case 'admin':
-        return AdminHome();
+        return AdminDashboard();  //AdminHome
       case 'alumni':
         return AlumniHome();
       default:

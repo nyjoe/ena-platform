@@ -2,12 +2,36 @@ import 'package:appli_ena/auth/auth_gate.dart';
 import 'package:appli_ena/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+//import 'package:firebase_messaging/firebase_messaging.dart';
+//import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+// final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+// Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+//   await Firebase.initializeApp();
+//   print("🔔 [BG] Message: ${message.notification?.title}");
+// }
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform
   );
+  //FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+
+  // Initialisation des notifications locales
+  // const androidInit = AndroidInitializationSettings('@mipmap/ic_launcher');
+  // const initSettings = InitializationSettings(android: androidInit);
+  // await flutterLocalNotificationsPlugin.initialize(initSettings);
+
+  // await flutterLocalNotificationsPlugin.initialize(
+  //   const InitializationSettings(
+  //     android: AndroidInitializationSettings('@mipmap/ic_launcher'),
+  //     iOS: DarwinInitializationSettings(),
+  //   ),
+  // );
+
+
   runApp(const MyApp());
 }
 

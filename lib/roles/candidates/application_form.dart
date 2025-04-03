@@ -1,4 +1,5 @@
 // candidate_application_form.dart
+import 'package:appli_ena/services/firebase/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -61,7 +62,7 @@ class _CandidateApplicationFormState extends State<CandidateApplicationForm> {
               'email': _email,
               'motivation': _motivation,
               'cvUrl': _cvDownloadUrl,
-              'statut': 'Soumise',
+              'statut': 'soumise',
               'submittedAt': FieldValue.serverTimestamp(),
             });
 
@@ -81,7 +82,30 @@ class _CandidateApplicationFormState extends State<CandidateApplicationForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Déposer une candidature")),
+      appBar: AppBar(
+      backgroundColor: Color(0xff1c3d8f),
+      foregroundColor: Colors.white,
+      title:Text("Déposer une candidature"),
+      actions: [
+        IconButton(
+        onPressed: (){
+          // Navigator.push(
+          // context, 
+          // MaterialPageRoute(
+          //   builder: (context) => const CountriesPage(title: "Countries",)
+          // )
+          // );
+        }, 
+        icon: const Icon(Icons.refresh),
+        ),
+        IconButton(
+        onPressed: (){
+          //Auth().logOut();
+        }, 
+        icon: const Icon(Icons.logout_outlined),
+        ),
+      ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(

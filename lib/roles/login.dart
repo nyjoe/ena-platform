@@ -95,6 +95,7 @@ class _LoginPageState extends State<LoginPage>{
               if (!_forLogin) DropdownButtonFormField<String>(
                 value: _selectedRole,
                 decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.accessibility),
                   labelText: "Rôle",
                   border: OutlineInputBorder(),
                 ),
@@ -102,7 +103,6 @@ class _LoginPageState extends State<LoginPage>{
                   'Admin',
                   'Alumni',
                   'Candidat',
-                  'Visiteur',
                   'Eleve',
                   'Enseignant',
                 ].map((role) {
